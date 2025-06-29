@@ -19,7 +19,7 @@ setup(
         "scikit-learn",
         "statsmodels",
         "plotly",
-        "tensorflow",
+        "streamlit"
     ],
     python_requires=">=3.8",
 )

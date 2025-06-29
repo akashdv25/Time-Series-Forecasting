@@ -1,2 +1,17 @@
 myvenv/
 project-ideas.md
+Time_series_forecasting.egg-info/
+project-flow.md
+server-metrics-idea.md
+system_metrics.csv*
+.env
+__pycache__
+__pycache__/
+__pycache__*
+mlartifacts/
+mlruns
+artifacts
+mlflow_db/
+ml*
+to-do.md
+logging-info/
