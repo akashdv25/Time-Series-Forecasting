@@ -52,7 +52,7 @@ brew install --cask docker
 
 ```bash
 # Clone the repository
-git clone <your-repository-url>
+git clone <https://github.com/akashdv25/Time-Series-Forecasting>
 cd Time-series
 
 # Verify you have all files
