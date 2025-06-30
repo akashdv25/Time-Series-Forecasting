@@ -9,6 +9,9 @@ echo " Setting up directories for MLflow and Docker volumes..."
 mkdir -p artifacts
 mkdir -p mlruns  
 mkdir -p mlflow_db
+mkdir -p data/raw
+mkdir -p data/processed
+
 
 # Set proper permissions (read/write for user, group, and others)
 chmod 755 artifacts mlruns mlflow_db
