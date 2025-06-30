@@ -251,7 +251,7 @@ class DashboardApp:
                 )
             
             fig.update_layout(
-                title="Next 20 Minutes Forecast",
+                title="Next 4 Hours Forecast",
                 height=600,
                 template='plotly_white',
                 showlegend=True
@@ -314,11 +314,11 @@ class DashboardApp:
                 if (self.cpu_forecast is not None and 
                     'cpu_usage_percent_forecast' in self.cpu_forecast.columns and 
                     len(self.cpu_forecast) > 0):
-                    next_cpu = self.cpu_forecast['cpu_usage_percent_forecast'].iloc[0]
+                    avg_cpu = self.cpu_forecast['cpu_usage_percent_forecast'].mean()
                     st.markdown(f"""
                     <div class="forecast-card">
-                        <h3>Next CPU (+5min)</h3>
-                        <h2>{next_cpu:.1f}%</h2>
+                        <h3>Forecasted CPU Usage (4hr avg)</h3>
+                        <h2>{avg_cpu:.1f}%</h2>
                     </div>
                     """, unsafe_allow_html=True)
                 else:
@@ -331,11 +331,11 @@ class DashboardApp:
                 if (self.memory_forecast is not None and 
                     'memory_usage_percent_forecast' in self.memory_forecast.columns and 
                     len(self.memory_forecast) > 0):
-                    next_memory = self.memory_forecast['memory_usage_percent_forecast'].iloc[0]
+                    avg_memory = self.memory_forecast['memory_usage_percent_forecast'].mean()
                     st.markdown(f"""
                     <div class="forecast-card">
-                        <h3>Next Memory (+5min)</h3>
-                        <h2>{next_memory:.1f}%</h2>
+                        <h3>Forecasted Memory Usage(4hr avg)</h3>
+                        <h2>{avg_memory:.1f}%</h2>
                     </div>
                     """, unsafe_allow_html=True)
                 else:
@@ -366,12 +366,17 @@ class DashboardApp:
             # Run the complete pipeline
             python src/main.py
             ```
+                        
+              ```bash
+            # Restart the streamlit container
+            docker compose restart streamlit
+            ```             
             
             This will:
             1. 📊 Collect system metrics from InfluxDB
             2. 🧹 Clean and preprocess the data  
             3. 🤖 Train ARIMA forecasting models
-            4. 🔮 Generate forecasts for the next 20 minutes
+            4. 🔮 Generate forecasts for the next 4 hours
             
             Once completed, refresh this page to see your forecasting dashboard!
             """)
@@ -485,7 +490,7 @@ class DashboardApp:
         
         # Footer
         st.markdown("---")
-        st.markdown("**🤖 Powered by ARIMA Models | 📊 Real-time System Monitoring**")
+        st.markdown("**🤖 Powered by SARIMA Models | 📊 Real-time System Monitoring**")
 
 if __name__ == "__main__":
     dashboard = DashboardApp()
