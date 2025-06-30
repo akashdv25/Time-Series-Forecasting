@@ -15,3 +15,4 @@ mlflow_db/
 ml*
 to-do.md
 logging-info/
+data/

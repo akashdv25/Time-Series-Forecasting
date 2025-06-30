@@ -276,18 +276,40 @@ Time-series/
 ├── 🐳 docker-compose.yml       # Service orchestration
 ├── 📋 requirements.txt         # Python dependencies
 ├── ⚙️ setup-directories.sh     # Permission setup
+├── 🐳 Dockerfile.streamlit     # Streamlit container config
+├── 📄 setup.py                 # Package installation
+├── 📄 example.env / .env       # Environment variables
 ├── 📁 src/                     # Source code
+│   ├── __init__.py            # Package initialization
 │   ├── ingestion.py           # Data collection
 │   ├── pre_processing.py      # Data cleaning
 │   ├── model_train.py         # ML training
 │   ├── model_inference.py     # Predictions
-│   └── logger_setup.py        # Logging
+│   └── logger_setup.py        # Logging configuration
 ├── 📁 data/                    # Data storage
 │   ├── raw/                   # Raw metrics
 │   └── preprocessed/          # Cleaned data
+├── 📁 assets/                  # Static assets
+│   └── images/                # UI screenshots & diagrams
+│       ├── ui.png             # Dashboard screenshot
+│       └── flow-1.png         # System flow diagram
 ├── 📁 artifacts/               # ML models & forecasts
-├── 📁 mlruns/                  # Experiment tracking
-└── 📁 logging-info/            # Application logs
+├── 📁 mlruns/                  # MLflow experiment tracking
+├── 📁 mlflow_db/               # MLflow database storage
+├── 📁 logging-info/            # Application logs
+├── 📁 grafana/                 # Grafana configuration
+│   └── provisioning/          # Auto-provisioning configs
+│       ├── dashboards/        # Dashboard definitions
+│       │   ├── dashboard.yaml # Dashboard config
+│       │   └── node-exporter-full.json # Node exporter dashboard
+│       └── datasources/       # Data source configs
+│           └── datasources.yml # InfluxDB connection
+├── 📁 prometheus/              # Prometheus configuration
+│   └── prometheus.yml         # Metrics collection config
+├── 📁 telegraf/                # Telegraf configuration
+│   └── telegraf.conf          # Metrics forwarding config
+├── 📁 myvenv/                  # Python virtual environment
+└── 📁 Time_series_forecasting.egg-info/ # Package metadata
 ```
 
 ## 🛑 Shutdown
