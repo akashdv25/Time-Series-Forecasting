@@ -334,9 +334,6 @@ crontab -e
 # Add: 0 * * * * cd /path/to/Time-series && python src/main.py
 ```
 
-### Production Deployment
-- See `DEPLOYMENT.md` for EC2 deployment guide
-- Includes Nginx, SSL, monitoring, and scaling
 
 ### Model Improvements
 - Experiment with different ARIMA parameters
