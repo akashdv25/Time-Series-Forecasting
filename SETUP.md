@@ -4,7 +4,7 @@
 
 A **complete real-time server monitoring and forecasting system** with:
 - 📊 **Beautiful Streamlit Dashboard** for interactive forecasting
-- 🤖 **ARIMA ML Models** for CPU/Memory usage prediction
+- 🤖 **SARIMA ML Models** for CPU/Memory usage prediction with seasonal patterns
 - 📈 **Grafana Monitoring** for real-time system metrics
 - 🔬 **MLflow Tracking** for experiment management
 - 🐳 **Docker Stack** with 7 integrated services
@@ -118,8 +118,8 @@ python src/main.py
 **What this does:**
 1. 📥 **Ingestion**: Collects system metrics from InfluxDB
 2. 🧹 **Preprocessing**: Cleans and prepares data
-3. 🤖 **Training**: Trains ARIMA models for CPU/Memory forecasting
-4. 🔮 **Inference**: Generates next 20-minute predictions
+3. 🤖 **Training**: Trains SARIMA models for CPU/Memory forecasting
+4. 🔮 **Inference**: Generates next 4-hour predictions
 
 ## 🌐 Step 6: Access Your Dashboard
 
@@ -171,7 +171,7 @@ Your Streamlit dashboard includes:
 
 ### 📊 **Metrics Cards**
 - Current CPU/Memory usage
-- Next 5-minute forecasts
+- Next 4-hour forecasts (showing first prediction step)
 - Beautiful gradient styling
 
 ### 📈 **Interactive Charts**
