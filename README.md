@@ -7,6 +7,8 @@
 
 ---
 
+> 📝 **Read the detailed blog post**: [Building a Real-Time Server Monitoring System with AI-Powered Forecasting](https://medium.com/@akashanandani.56/building-a-real-time-server-monitoring-system-with-ai-powered-forecasting-af0ce53b5510)
+
 ## 🎯 Project Overview
 
 **A complete real-time server monitoring and forecasting system** that combines modern DevOps tools with machine learning to predict system resource usage. This project demonstrates end-to-end MLOps practices with automated data collection, preprocessing, model training, and interactive visualization.
