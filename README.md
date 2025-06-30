@@ -97,8 +97,9 @@ Our ML pipeline uses **Seasonal ARIMA (SARIMA)** models optimized for system met
 
 ### 🔄 Pipeline Flow
 
+
 ```bash
-System Metrics → Telegraf → InfluxDB → Data Ingestion → Preprocessing → SARIMA Training → Forecasts
+Linux System → Node Exporter → Prometheus (15s intervals) → Grafana Dashboards -> Telegraf -> InfluxDB 
 ```
 
 ### 📁 Pipeline Components
